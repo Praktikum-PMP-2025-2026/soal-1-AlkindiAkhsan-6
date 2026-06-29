@@ -28,13 +28,13 @@ void validparentheses(int n, int pos, int open, int close){
       return;
    }
    else{
-      if(open > close){
-         str[pos] = ')';
-         validparentheses(n, pos+1, open, close+1);
-      }
       if(n > open){
          str[pos] = '(';
          validparentheses(n, pos+1, open+1, close);
+      }
+      if(open > close){
+         str[pos] = ')';
+         validparentheses(n, pos+1, open, close+1);
       }
    }
 }
