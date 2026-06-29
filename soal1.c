@@ -54,6 +54,7 @@ int main(void) {
    int n;
    int total;
    scanf("%d", &n);
+   print("");
    printparenthesis(n);
    getchar();
    total = catalan(n);
