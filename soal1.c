@@ -39,12 +39,25 @@ void validparentheses(int n, int pos, int open, int close){
    }
 }
 
+int catalan( int n){
+   if(n == 0){
+      return 1;
+   }
+   else{
+      return(2*((2*n)-1))*(catalan(n-1))/(n+1);
+   }
+   
+}
+
   
 int main(void) {
    int n;
+   int total;
    scanf("%d", &n);
    printparenthesis(n);
    getchar();
+   total = catalan(n);
+   printf("TOTAL %d", total);
    return 0;
 }
  
